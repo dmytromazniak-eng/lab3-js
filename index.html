@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ЛР3 — Генерація даних у таблиці (JavaScript)</title>
+
+    <!-- Підключення зовнішнього CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Лабораторна робота №3 (JavaScript)</h1>
+    <p class="hint">
+        Скрипт випадково генерує дані та поступово додає рядки в таблицю з заданим інтервалом.
+    </p>
+
+    <div class="panel">
+        <label for="intervalInput"><b>Інтервал появи рядків (мс):</b></label>
+        <input id="intervalInput" type="number" min="100" step="100" value="1000" />
+
+        <button id="startBtn">Старт</button>
+        <button id="stopBtn" disabled>Стоп</button>
+        <button id="clearBtn">Очистити</button>
+
+        <div class="status" id="statusText">Стан: очікування запуску.</div>
+    </div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Час</th>
+                <th>Ім’я</th>
+                <th>Значення</th>
+                <th>Статус</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!-- Рядки додаються скриптом -->
+        </tbody>
+    </table>
+
+    <!-- Підключення зовнішнього JS -->
+    <script src="script.js"></script>
+</body>
+</html>
